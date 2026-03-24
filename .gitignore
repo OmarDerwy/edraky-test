@@ -146,3 +146,4 @@ vite.config.ts.timestamp-*
 # database
 *.sqlite
 *.sqlite3
+@cds-models

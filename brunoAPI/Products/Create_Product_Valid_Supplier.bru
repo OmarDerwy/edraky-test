@@ -1,0 +1,77 @@
+meta {
+  name: Create Product - Valid Supplier
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{domain}}{{port}}{{api}}catalog/Products
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Laptop Pro",
+    "price": 1299.99,
+    "category": "Electronics",
+    "external_rating": 4.5,
+    "average_rating": 4.3,
+    "supplier_ID": "77777777-7777-7777-7777-777777777777"
+  }
+}
+
+example {
+  name: (s)valid_input
+  
+  request: {
+    url: {{domain}}{{port}}{{api}}catalog/Products
+    method: POST
+    mode: json
+    body:json: {
+      {
+        "name": "Laptop Pro",
+        "price": 1299.99,
+        "category": "Electronics",
+        "external_rating": 4.5,
+        "average_rating": 4.3,
+        "supplier_ID": "77777777-7777-7777-7777-777777777777"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      x-powered-by: Express
+      x-correlation-id: db077c5f-3675-43e7-9351-b2b796cee580
+      odata-version: 4.0
+      location: Products(b4218f09-f5f9-4009-933e-e0ab7dc4d4f8)
+      content-type: application/json; charset=utf-8
+      content-length: 248
+      date: Tue, 24 Mar 2026 16:52:08 GMT
+      connection: keep-alive
+      keep-alive: timeout=5
+    }
+  
+    status: {
+      code: 201
+      text: Created
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "@odata.context": "$metadata#Products/$entity",
+          "ID": "b4218f09-f5f9-4009-933e-e0ab7dc4d4f8",
+          "name": "Laptop Pro",
+          "price": 1299.99,
+          "category": "Electronics",
+          "external_rating": 4.5,
+          "average_rating": 4.3,
+          "supplier_ID": "77777777-7777-7777-7777-777777777777"
+        }
+      '''
+    }
+  }
+}

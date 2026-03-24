@@ -1,0 +1,20 @@
+meta {
+  name: Create Product Review - Invalid Product
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{domain}}{{port}}{{api}}catalog/ProductReviews
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "product_ID": "f9999999-9999-9999-9999-999999999999",
+    "rating": 5,
+    "comment": "Testing invalid product",
+    "reviewer": "Test User"
+  }
+}

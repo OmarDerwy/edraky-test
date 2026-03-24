@@ -1,0 +1,15 @@
+meta {
+  name: Get Product By ID
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{domain}}{{port}}{{api}}catalog/Products(b4218f09-f5f9-4009-933e-e0ab7dc4d4f8)?$expand=supplier
+  body: none
+  auth: none
+}
+
+params:query {
+  $expand: supplier
+}

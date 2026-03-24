@@ -1,0 +1,19 @@
+meta {
+  name: Create Supplier
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{domain}}{{port}}{{api}}catalog/Suppliers
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "TechCorp Industries",
+    "email": "contact@techcorp.com",
+    "rating": 5
+  }
+}

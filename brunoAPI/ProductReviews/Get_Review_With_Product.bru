@@ -1,0 +1,10 @@
+meta {
+  name: Get Review With Product (Expand)
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{domain}}{{port}}{{api}}catalog/ProductReviews(b1111111-1111-1111-1111-111111111111)?$expand=product
+  auth: none
+}

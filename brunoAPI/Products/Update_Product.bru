@@ -1,0 +1,18 @@
+meta {
+  name: Update Product
+  type: http
+  seq: 6
+}
+
+patch {
+  url: {{domain}}{{port}}{{api}}catalog/Products(a1111111-1111-1111-1111-111111111111)
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "price": 1199.99,
+    "average_rating": 4.6
+  }
+}

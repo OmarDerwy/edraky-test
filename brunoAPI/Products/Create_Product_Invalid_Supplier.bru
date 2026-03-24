@@ -1,0 +1,22 @@
+meta {
+  name: Create Product - Invalid Supplier (Test FK)
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{domain}}{{port}}{{api}}catalog/Products
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Mouse Wireless",
+    "price": 29.99,
+    "category": "Accessories",
+    "external_rating": 3.8,
+    "average_rating": 3.9,
+    "supplier_ID": "f9999999-9999-9999-9999-999999999999"
+  }
+}

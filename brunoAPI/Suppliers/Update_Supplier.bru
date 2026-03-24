@@ -1,0 +1,18 @@
+meta {
+  name: Update Supplier
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{domain}}{{port}}{{api}}catalog/Suppliers(11111111-1111-1111-1111-111111111111)
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "rating": 4,
+    "email": "newemail@techcorp.com"
+  }
+}

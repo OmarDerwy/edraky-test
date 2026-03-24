@@ -1,0 +1,19 @@
+meta {
+  name: Create Supplier - Invalid Rating
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{domain}}{{port}}{{api}}catalog/Suppliers
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Invalid Rating Corp",
+    "email": "invalid@corp.com",
+    "rating": 10
+  }
+}

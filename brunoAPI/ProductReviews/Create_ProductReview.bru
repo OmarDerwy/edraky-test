@@ -1,0 +1,20 @@
+meta {
+  name: Create Product Review
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{domain}}{{port}}{{api}}catalog/ProductReviews
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "product_ID": "a1111111-1111-1111-1111-111111111111",
+    "rating": 5,
+    "comment": "Excellent laptop, very fast and reliable!",
+    "reviewer": "John Doe"
+  }
+}

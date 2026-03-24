@@ -1,0 +1,15 @@
+meta {
+  name: Get All Products
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{domain}}{{port}}{{api}}catalog/Products?$expand=supplier
+  body: none
+  auth: none
+}
+
+params:query {
+  $expand: supplier
+}

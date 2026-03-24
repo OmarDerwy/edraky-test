@@ -1,7 +1,7 @@
+using {cuid} from '@sap/cds/common';
 namespace spm;
 
-entity Supplier {
-    key id     : Integer;
+entity Supplier : cuid {
         name   : String(100);
         email  : String(100);
         rating : Integer @assert.range: [
@@ -10,23 +10,21 @@ entity Supplier {
         ];
 }
 
-entity Product {
-    key id             : Integer;
-        name           : String(100);
-        price          : Decimal(10, 2);
-        category       : String(50);
-        externalRating : Decimal(3, 2);
-        averageRating  : Decimal(3, 2);
-        supplierId     : Association to Supplier;
+entity Product : cuid {
+    name            : String(100);
+    price           : Decimal(10, 2);
+    category        : String(50);
+    external_rating : Decimal(3, 2);
+    average_rating  : Decimal(3, 2);
+    supplier        : Association to Supplier;
 }
 
-entity ProductReview {
-    key id        : Integer;
-        productId : Association to Product;
-        rating    : Integer @assert.range: [
-            1,
-            5
-        ];
-        comment   : String(255);
-        reviewer  : String(100);
+entity ProductReview : cuid {
+    product  : Association to Product;
+    rating   : Integer @assert.range: [
+        1,
+        5
+    ];
+    comment  : String(255);
+    reviewer : String(100);
 }

@@ -56,14 +56,18 @@ Throughout the development of this project, several architectural decisions were
 ├── package.json
 └── readme.md
 ```
-
+## Bonus Items Done
+- Typescript
+- Authentication
+- Logging
+- Unit tests
 ---
 
 ## API Documentation
 
 ### Products
 
-# Create a Product
+#### Create a Product
 POST /catalog/Products
 ```json
 {
@@ -74,13 +78,13 @@ POST /catalog/Products
 }
 ```
 
-# List all Products
+#### List all Products
 GET /catalog/Products
 
-# Get Product By ID
+#### Get Product By ID
 GET /catalog/Products/{ID}
 
-# Update a Product
+#### Update a Product
 PUT /catalog/Products/{ID}
 ```json
 {
@@ -88,12 +92,12 @@ PUT /catalog/Products/{ID}
 }
 ```
 
-# Delete a Product
+#### Delete a Product
 DELETE /catalog/Products/{ID}
 
 ### Suppliers
 
-# Create a Supplier
+#### Create a Supplier
 POST /catalog/Suppliers
 ```json
 {
@@ -103,13 +107,13 @@ POST /catalog/Suppliers
 }
 ```
 
-# List all Suppliers
+#### List all Suppliers
 GET /catalog/Suppliers
 
-# Get Supplier By ID
+#### Get Supplier By ID
 GET /catalog/Suppliers/{ID}
 
-# Update a Supplier
+#### Update a Supplier
 PUT /catalog/Suppliers/{ID}
 ```json
 {
@@ -117,12 +121,12 @@ PUT /catalog/Suppliers/{ID}
 }
 ```
 
-# Delete a Supplier
+#### Delete a Supplier
 DELETE /catalog/Suppliers/{ID}
 
 ### Product Reviews
 
-# Create a Product Review
+#### Create a Product Review
 POST /catalog/ProductReviews
 ```json
 {
@@ -133,7 +137,7 @@ POST /catalog/ProductReviews
 }
 ```
 
-# Submit a Custom Review (Unbound Action)
+#### Submit a Custom Review (Unbound Action)
 POST /catalog/submitReview
 ```json
 {
@@ -143,13 +147,13 @@ POST /catalog/submitReview
 }
 ```
 
-# List all Product Reviews
+#### List all Product Reviews
 GET /catalog/ProductReviews
 
-# Get Product Review By ID
+#### Get Product Review By ID
 GET /catalog/ProductReviews/{ID}
 
-# Update a Product Review
+#### Update a Product Review
 PUT /catalog/ProductReviews/{ID}
 ```json
 {
@@ -158,5 +162,6 @@ PUT /catalog/ProductReviews/{ID}
 }
 ```
 
-# Delete a Product Review
+#### Delete a Product Review
 DELETE /catalog/ProductReviews/{ID}
+

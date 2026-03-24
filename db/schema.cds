@@ -4,7 +4,10 @@ entity Supplier {
     key id     : Integer;
         name   : String(100);
         email  : String(100);
-        rating : Integer;
+        rating : Integer @assert.range: [
+            1,
+            5
+        ];
 }
 
 entity Product {
@@ -14,13 +17,16 @@ entity Product {
         category       : String(50);
         externalRating : Decimal(3, 2);
         averageRating  : Decimal(3, 2);
-        supplierId     : Integer;
+        supplierId     : Association to Supplier;
 }
 
 entity ProductReview {
     key id        : Integer;
-        productId : Integer;
-        rating    : Integer;
+        productId : Association to Product;
+        rating    : Integer @assert.range: [
+            1,
+            5
+        ];
         comment   : String(255);
         reviewer  : String(100);
 }

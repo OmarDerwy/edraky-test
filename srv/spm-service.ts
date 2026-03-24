@@ -1,29 +1,26 @@
 import cds from '@sap/cds';
-import { FakeStoreResponse } from '../types/fakestore';
+import { fetchExternalRating } from './handlers/products';
+
+const LOG = cds.log('spm-service');
 
 export default class CatalogService extends cds.ApplicationService {
     async init() {
+        LOG.info('Initializing CatalogService');
+
         this.before('CREATE', 'Products', async (req) => {
-            if (!req.data.category) return;
+            const category = req.data.category;
+            
+            if (!category) {
+                LOG.info('No category provided for product creation, skipping external rating fetch');
+                return;
+            }
 
-            try {
-                const response = await fetch('https://dummyjson.com/products?limit=100');
-                if (!response.ok) {
-                    console.warn(`[Products] FakeStore API returned ${response.status}`);
-                    return;
-                }
+            LOG.info(`Processing product creation for category: ${category}`);
+            const externalRating = await fetchExternalRating(category);
 
-                const data: FakeStoreResponse = await response.json();
-
-                const matchedProduct = data.products.find(
-                    (p) => p.category.toLowerCase() === req.data.category.toLowerCase()
-                );
-
-                if (matchedProduct && typeof matchedProduct.rating === 'number') {
-                    req.data.external_rating = matchedProduct.rating;
-                }
-            } catch (err) {
-                console.error('[Products] Failed to fetch external rating from FakeStore API:', err);
+            if (externalRating !== undefined) {
+                req.data.external_rating = externalRating;
+                LOG.info(`Assigned external rating ${externalRating} to the new product`);
             }
         });
 

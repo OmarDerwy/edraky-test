@@ -12,7 +12,7 @@ export async function fetchExternalRating(category: string): Promise<number | un
     LOG.info(`Fetching external rating for category: ${category}`);
     
     try {
-        const response = await fetch('https://fakestoreapi.com/products');
+        const response = await fetch('https://dummyjson.com/products?limit=100');
         
         if (!response.ok) {
             LOG.warn(`FakeStore API request failed with status: ${response.status}`);

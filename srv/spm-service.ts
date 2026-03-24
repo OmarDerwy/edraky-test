@@ -1,5 +1,6 @@
 import cds from '@sap/cds';
 import { fetchExternalRating } from './handlers/products';
+import { submitReviewHandler } from './handlers/reviews';
 
 const LOG = cds.log('spm-service');
 
@@ -23,6 +24,8 @@ export default class CatalogService extends cds.ApplicationService {
                 LOG.info(`Assigned external rating ${externalRating} to the new product`);
             }
         });
+
+        this.on('submitReview', submitReviewHandler);
 
         return super.init();
     }

@@ -1,6 +1,6 @@
 using {spm} from '../db/schema';
 
-service CatalogService {
+service CatalogService @(requires: 'authenticated-user') {
     entity Suppliers      as projection on spm.Supplier;
 
     entity Products       as
@@ -8,6 +8,9 @@ service CatalogService {
             *,
             ID              @Core.Computed,
             external_rating @readonly,
+            average_rating  @readonly,
         };
     entity ProductReviews as projection on spm.ProductReview;
+
+    action submitReview(productID: UUID, rating: Integer, comment: String);
 }

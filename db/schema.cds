@@ -12,7 +12,10 @@ entity Supplier : cuid {
 
 entity Product : cuid {
     name            : String(100);
-    price           : Decimal(10, 2);
+    price           : Decimal(10, 2) @assert.range: [
+        (0),
+        _
+    ];
     category        : String(50);
     external_rating : Decimal(3, 2);
     average_rating  : Decimal(3, 2);

@@ -1,0 +1,29 @@
+meta {
+  name: Create ProductReview
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{domain}}{{port}}{{api}}catalog/submitReview
+  body: json
+  auth: basic
+}
+
+auth:basic {
+  username: admin
+  password: 
+}
+
+body:json {
+  {
+    "productID": "b64bcaf6-87b3-4cdb-924f-e88cafd23dba",
+    "rating": 3,
+    "comment": "Excellent laptop, very fast and reliable!"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

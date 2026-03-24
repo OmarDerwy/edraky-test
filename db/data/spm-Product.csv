@@ -1,0 +1,13 @@
+id,name,price,category,external_rating,average_rating,supplier_id
+1,Wireless Mouse,25.99,Electronics,4.5,4.3,1
+2,USB-C Cable,12.50,Electronics,4.8,4.6,1
+3,Mechanical Keyboard,89.99,Electronics,4.7,4.5,2
+4,Monitor Stand,35.00,Office Furniture,4.4,4.2,2
+5,Desk Lamp,45.50,Office Furniture,4.6,4.4,3
+6,Ergonomic Chair,199.99,Office Furniture,4.5,4.3,3
+7,Laptop Cooling Pad,29.99,Electronics,4.3,4.1,4
+8,Notebook Set,15.00,Stationery,4.2,4.0,5
+9,Ballpoint Pen,1.50,Stationery,3.9,3.8,5
+10,Desk Organizer,22.00,Office Furniture,4.1,3.9,6
+11,USB Hub,39.99,Electronics,4.4,4.2,4
+12,Webcam HD,59.99,Electronics,4.6,4.4,2

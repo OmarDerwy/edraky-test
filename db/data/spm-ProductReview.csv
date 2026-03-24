@@ -1,18 +1,18 @@
-id,product_id,rating,comment,reviewer
-1,1,5,Excellent mouse! Works perfectly with my laptop,John Smith
-2,1,4,Good quality but a bit pricey,Sarah Johnson
-3,2,5,Best cable I've ever used,Mike Chen
-4,3,5,Amazing keyboard with great switches,Emily Davis
-5,3,4,Good but needs some getting used to,Robert Wilson
-6,4,4,Sturdy and well-designed stand,Lisa Anderson
-7,5,5,Perfect lighting for my desk,David Martinez
-8,5,4,Great lamp quality,Jennifer Lee
-9,6,5,Best office chair purchase ever,Thomas Brown
-10,6,4,Comfortable but expensive,Nancy Garcia
-11,7,4,Keeps laptop cool efficiently,James Rodriguez
-12,8,5,Perfect quality notebooks,Maria White
-13,9,3,Basic pens nothing special,Peter Jackson
-14,10,4,Good organizer for desk,Angela Taylor
-15,11,5,Works great with multiple devices,Christopher Moore
-16,12,5,Crystal clear video quality,Patricia Harris
-17,12,4,Great for video calls,Mark Thompson
+ID,product_ID,rating,comment,reviewer
+b1111111-1111-1111-1111-111111111111,a1111111-1111-1111-1111-111111111111,5,Excellent mouse! Works perfectly with my laptop,John Smith
+b2222222-2222-2222-2222-222222222222,a1111111-1111-1111-1111-111111111111,4,Good quality but a bit pricey,Sarah Johnson
+b3333333-3333-3333-3333-333333333333,a2222222-2222-2222-2222-222222222222,5,Best cable I've ever used,Mike Chen
+b4444444-4444-4444-4444-444444444444,a3333333-3333-3333-3333-333333333333,5,Amazing keyboard with great switches,Emily Davis
+b5555555-5555-5555-5555-555555555555,a3333333-3333-3333-3333-333333333333,4,Good but needs some getting used to,Robert Wilson
+b6666666-6666-6666-6666-666666666666,a4444444-4444-4444-4444-444444444444,4,Sturdy and well-designed stand,Lisa Anderson
+b7777777-7777-7777-7777-777777777777,a5555555-5555-5555-5555-555555555555,5,Perfect lighting for my desk,David Martinez
+b8888888-8888-8888-8888-888888888888,a5555555-5555-5555-5555-555555555555,4,Great lamp quality,Jennifer Lee
+b9999999-9999-9999-9999-999999999999,a6666666-6666-6666-6666-666666666666,5,Best office chair purchase ever,Thomas Brown
+b0000000-0000-0000-0000-000000000000,a6666666-6666-6666-6666-666666666666,4,Comfortable but expensive,Nancy Garcia
+b1111111-1111-1111-1111-222222222222,a7777777-7777-7777-7777-777777777777,4,Keeps laptop cool efficiently,James Rodriguez
+b2222222-2222-2222-2222-333333333333,a8888888-8888-8888-8888-888888888888,5,Perfect quality notebooks,Maria White
+b3333333-3333-3333-3333-444444444444,a9999999-9999-9999-9999-999999999999,3,Basic pens nothing special,Peter Jackson
+b4444444-4444-4444-4444-555555555555,a0000000-0000-0000-0000-000000000000,4,Good organizer for desk,Angela Taylor
+b5555555-5555-5555-5555-666666666666,a1111111-1111-1111-1111-222222222222,5,Works great with multiple devices,Christopher Moore
+b6666666-6666-6666-6666-777777777777,a2222222-2222-2222-2222-333333333333,5,Crystal clear video quality,Patricia Harris
+b7777777-7777-7777-7777-888888888888,a2222222-2222-2222-2222-333333333333,4,Great for video calls,Mark Thompson

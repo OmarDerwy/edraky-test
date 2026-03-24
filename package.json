@@ -23,7 +23,7 @@
   },
   "cds": {
     "requires": {
-      "auth": "jwt"
+      "auth": "mocked"
     }
   }
 }

@@ -82,10 +82,10 @@ POST /catalog/Products
 GET /catalog/Products
 
 #### Get Product By ID
-GET /catalog/Products/{ID}
+GET /catalog/Products(ID)
 
 #### Update a Product
-PUT /catalog/Products/{ID}
+PUT /catalog/Products(ID)
 ```json
 {
   "price": 34.99
@@ -93,7 +93,7 @@ PUT /catalog/Products/{ID}
 ```
 
 #### Delete a Product
-DELETE /catalog/Products/{ID}
+DELETE /catalog/Products(ID)
 
 ### Suppliers
 
@@ -111,10 +111,10 @@ POST /catalog/Suppliers
 GET /catalog/Suppliers
 
 #### Get Supplier By ID
-GET /catalog/Suppliers/{ID}
+GET /catalog/Suppliers(ID)
 
 #### Update a Supplier
-PUT /catalog/Suppliers/{ID}
+PUT /catalog/Suppliers(ID)
 ```json
 {
   "rating": 4
@@ -122,7 +122,7 @@ PUT /catalog/Suppliers/{ID}
 ```
 
 #### Delete a Supplier
-DELETE /catalog/Suppliers/{ID}
+DELETE /catalog/Suppliers(ID)
 
 ### Product Reviews
 
@@ -151,10 +151,10 @@ POST /catalog/submitReview
 GET /catalog/ProductReviews
 
 #### Get Product Review By ID
-GET /catalog/ProductReviews/{ID}
+GET /catalog/ProductReviews(ID)
 
 #### Update a Product Review
-PUT /catalog/ProductReviews/{ID}
+PUT /catalog/ProductReviews(ID)
 ```json
 {
   "rating": 5,
@@ -163,5 +163,5 @@ PUT /catalog/ProductReviews/{ID}
 ```
 
 #### Delete a Product Review
-DELETE /catalog/ProductReviews/{ID}
+DELETE /catalog/ProductReviews(ID)
 

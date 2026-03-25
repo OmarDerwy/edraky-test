@@ -5,11 +5,16 @@ meta {
 }
 
 get {
-  url: {{domain}}{{port}}{{api}}catalog/Products?$expand=supplier
+  url: {{domain}}{{port}}{{api}}catalog/Products
   body: none
-  auth: none
+  auth: basic
 }
 
 params:query {
-  $expand: supplier
+  ~$expand: supplier
+}
+
+auth:basic {
+  username: admin
+  password: 
 }

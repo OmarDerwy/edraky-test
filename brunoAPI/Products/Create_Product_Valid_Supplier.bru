@@ -7,16 +7,19 @@ meta {
 post {
   url: {{domain}}{{port}}{{api}}catalog/Products
   body: json
-  auth: none
+  auth: basic
+}
+
+auth:basic {
+  username: admin
+  password: 
 }
 
 body:json {
   {
     "name": "Laptop Pro",
     "price": 1299.99,
-    "category": "Electronics",
-    "external_rating": 4.5,
-    "average_rating": 4.3,
+    "category": "beauty",
     "supplier_ID": "77777777-7777-7777-7777-777777777777"
   }
 }
